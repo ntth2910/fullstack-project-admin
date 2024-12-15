@@ -16,7 +16,7 @@ const AdminContent = ({ children }: AdminContentProps) => {
       <div
         style={{
           padding: 24,
-          minHeight: 360,
+          minHeight: "calc(100vh - 152px)",
           background: colorBgContainer,
           borderRadius: borderRadiusLG,
         }}
