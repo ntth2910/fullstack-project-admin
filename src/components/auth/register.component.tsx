@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import type { FormProps } from "antd";
-import { Button, Checkbox, Col, Divider, Form, Input, Row } from "antd";
+import { Button, Col, Divider, Form, Input, Row } from "antd";
 import Link from "next/link";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 

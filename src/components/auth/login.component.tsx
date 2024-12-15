@@ -1,17 +1,24 @@
 "use client";
 import React from "react";
 import type { FormProps } from "antd";
-import { Button, Checkbox, Col, Divider, Form, Input, Row } from "antd";
+import { Button, Col, Divider, Form, Input, Row } from "antd";
 import Link from "next/link";
 import { ArrowLeftOutlined } from "@ant-design/icons";
+import { authenticate } from "@/utils/actions";
+import { signIn } from "next-auth/react";
 
 type FieldType = {
   email?: string;
   password?: string;
 };
 
-const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
+const onFinish: FormProps<FieldType>["onFinish"] = async (values: any) => {
   console.log("Success:", values);
+  const { email, password } = values;
+
+  //trigger login
+  const res = await authenticate(email, password);
+  console.log("ress", res);
 };
 
 const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (errorInfo) => {

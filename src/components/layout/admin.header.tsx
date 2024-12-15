@@ -6,7 +6,7 @@ import {
   MenuUnfoldOutlined,
   SmileOutlined,
 } from "@ant-design/icons";
-import { Button, Dropdown, MenuProps, Space, theme } from "antd";
+import { Button, Dropdown, MenuProps, Space } from "antd";
 import { Header } from "antd/es/layout/layout";
 import React, { useContext } from "react";
 
